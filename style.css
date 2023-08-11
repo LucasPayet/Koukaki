@@ -1,0 +1,71 @@
+.header-video {
+  position: absolute;
+}
+
+.fade-in-down {
+  animation: fade-in-down 2s linear;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.no-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 1;
+  /* transform: translateY(0); */
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+#oscars div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 75%;
+  margin: auto;
+}
+#oscars span {
+  padding: 50px;
+  background-image: url(./assets/image/Rectangle\ 23.png);
+  background-repeat: no-repeat;
+}
+#oscars p {
+  margin: 0;
+  width: 643px;
+  height: 187px;
+  color: #FFF5E9;
+  font-family: "Quicksand", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 52.5px;
+  /* background-color: red; */
+}
+#oscars img {
+  width: 278px;
+  height: 129px;
+}
+
+.site-footer ul::after, .story h2::after, article.story__article::after {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes fade-in-down {
+  0% {
+    background-position: -20 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

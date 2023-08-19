@@ -5,13 +5,13 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner fade-in-down">
-            <!-- <video src="<?php echo get_stylesheet_directory_uri() . '/assets/video/Studio_Koukaki-vidéo_header_sans_son.mp4'; ?>" autoplay loop id="video" class="header-video" ></video> -->
+            <video src="<?php echo get_stylesheet_directory_uri() . '/assets/video/Studio_Koukaki-vidéo_header_sans_son.mp4'; ?>" autoplay loop id="video" class="header-video" ></video>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" class="fade-in-anim fade-in-up"> 
         </section>
         
         <section id="#story" class="story">
             <h2 class="fade-in-anim fade-in-up">L'histoire</h2>
-            <article id="" class="story__article">
+            <article id="" class="story__article fade-in-anim fade-in-up">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             <?php

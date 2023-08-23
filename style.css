@@ -2,18 +2,8 @@
   position: absolute;
 }
 
-.fade-in-down {
-  animation: fade-in-down 2s linear;
-}
-
-.fade-in-up {
-  opacity: 0;
-}
-
-.fade-in {
-  opacity: 1;
+.fade-in-anim {
   z-index: 998;
-  animation: fade-in 2s normal ease-in-out;
 }
 
 #oscars div {
@@ -44,7 +34,7 @@
   height: 129px;
 }
 
-.site-footer ul::after, .story h2::after, article.story__article::after {
+.spin, .site-footer ul::after, .story h2::after, article.story__article::after {
   animation: spin 20s linear infinite;
 }
 
@@ -64,7 +54,7 @@
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;

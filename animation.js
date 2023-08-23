@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     addFadeInAnimation();
 
     // console.log("Navigateur" + navigator.userAgent);
-
+    sleep(2000)
     const banner = document.querySelector('.banner');
     const firstChild = banner.firstChild;
 

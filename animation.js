@@ -13,7 +13,7 @@
 // if (isDesktop >  769) {
 //     banner.appendChild(videoHeader);
 // }
-
+let scrollTimeout;
 
 
 function isInViewport(element) {
@@ -37,6 +37,19 @@ function addFadeInAnimation() {
 }
 
 window.addEventListener('scroll', addFadeInAnimation);
+window.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+
+    var animationSpeed = "5s"
+    document.documentElement.style.setProperty('--animation-speed', animationSpeed);
+    scrollTimeout = setTimeout(() => {
+        animationSpeed = "20s"
+        document.documentElement.style.setProperty('--animation-speed', animationSpeed);
+    },1000);
+    
+})
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     addFadeInAnimation();

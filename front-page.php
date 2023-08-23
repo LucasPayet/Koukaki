@@ -66,7 +66,6 @@ get_header();
             </div>
             </section>
 
-        <?php get_template_part( 'oscars' ); ?>
     </main><!-- #main -->
 
 <?php

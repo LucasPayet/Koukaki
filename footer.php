@@ -10,7 +10,7 @@
  */
 
 ?>
-
+<?php get_template_part( 'oscars' ); ?>
 	<footer id="colophon" class="site-footer">
         <ul>
             <li><a href="#">Mentions Légales</a></li>
@@ -19,6 +19,7 @@
         </ul>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 

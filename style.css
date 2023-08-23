@@ -1,9 +1,27 @@
+:root {
+  --animation-speed:20s;
+}
+
 .header-video {
   position: absolute;
 }
 
 .fade-in-anim {
   z-index: 998;
+}
+
+.fade-in-up {
+  transform: translateY(25px);
+}
+
+.fade-in-down {
+  background-repeat: no-repeat;
+  animation: fade-in-down 2s linear;
+}
+
+.fade-in {
+  transform: translateY(0);
+  transition-duration: 2s;
 }
 
 #oscars div {
@@ -34,8 +52,8 @@
   height: 129px;
 }
 
-.spin, .site-footer ul::after, .story h2::after, article.story__article::after {
-  animation: spin 20s linear infinite;
+.site-footer ul::after, .story h2::after, article.story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after {
+  animation: spin var(--animation-speed) linear infinite;
 }
 
 @keyframes spin {
@@ -45,7 +63,7 @@
 }
 @keyframes fade-in-down {
   0% {
-    background-position: -20 0;
+    background-position: 0 -806px;
   }
   100% {
     background-position: 0 0;

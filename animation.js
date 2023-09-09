@@ -27,10 +27,10 @@ function isInViewport(element) {
 }
 
 function addFadeInAnimation() {
-    const sections = document.querySelectorAll('.fade-in-anim');
+    const sections = document.querySelectorAll('.title-anim');
     sections.forEach(section => {
         if (isInViewport(section)) {
-            section.classList.add('fade-in');
+            section.classList.add('title-up');
             // window.removeEventListener('scroll', addFadeInAnimation);
         }
     });
@@ -60,20 +60,32 @@ function addFadeInAnimation() {
 
 
 
-// window.addEventListener('scroll', addFadeInAnimation);
-window.addEventListener('scroll', () => {
-    clearTimeout(scrollTimeout);
+window.addEventListener('scroll', addFadeInAnimation);
+// window.addEventListener('scroll', () => {
+//     clearTimeout(scrollTimeout);
 
-    var animationSpeed = "5s"
-    document.documentElement.style.setProperty('--animation-speed', animationSpeed);
-    scrollTimeout = setTimeout(() => {
-        animationSpeed = "20s"
-        document.documentElement.style.setProperty('--animation-speed', animationSpeed);
-    },1000);
+//     var animationSpeed = "5s"
+//     document.documentElement.style.setProperty('--animation-speed', animationSpeed);
+//     scrollTimeout = setTimeout(() => {
+//         animationSpeed = "20s"
+//         document.documentElement.style.setProperty('--animation-speed', animationSpeed);
+//     },1000);
     
-})
+// })
 
+// const title = ;
 
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         const x = entry.target.querySelector('.title-anim')
+//         if (entry.isIntersecting) {
+//             x.classList.add('title-up');
+//             return;
+//         }
+//     });
+// });
+
+// observer.observe(document.querySelector('.title-anim'));
 
 document.addEventListener('DOMContentLoaded', function() {
     // addFadeInAnimation();

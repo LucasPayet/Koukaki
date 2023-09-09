@@ -4,6 +4,11 @@
 .header-video
     position: absolute
 
+.img_header
+    display: inline-block
+    z-index: 3
+    animation: float 10s linear infinite
+
 //fade in animation
 .fade-in-up
     z-index: 3
@@ -20,24 +25,32 @@ article.story__article::before
     
 article.story__article::after
     animation: fade-in 2s linear, spin var(--animation-speed) linear infinite
-    
+
 .fade-in-down
     background-repeat: no-repeat
     animation: fade-in-down 2s linear
 
 //fade in animation
 
-
-
 //title animation
-.title_up span
-    animation: titleup 2s
+.title-anim span
+    opacity: 0
 
-.title_up span:nth-child(1)
+.title-up span
+    display: inline-block
+    opacity: 0
+    transform: translateY(20px)
+    animation: titleup 1s ease-in forwards
+
+
+.title-up span:first-child
+    padding-right: 20px
+
+// .title-up span:nth-child(1)
+//     animation-delay: 1s
+
+.title-up span:nth-child(2)
     animation-delay: 0.5s
-
-.title_up span:nth-child(2)
-    animation-delay: 0.55s
 
 //title animation
 
@@ -114,9 +127,19 @@ article.story__article::after
     100%
         transform: rotate(360deg)
 
-// @keyframes float {
-    
-// }
+@keyframes float
+    0%
+        transform: translate(0, 0)
+    30%
+        transform: translate(30px, 40px)
+    50%
+        transform: translate(15px, 20px)
+    65%
+        transform: translate(-10px, -10px)
+    80%
+        transform: translate(-25px, -30px)
+    100%
+        transform: translate(0, 0)
 
 @keyframes fade-in-down
     0%
@@ -152,7 +175,7 @@ article.story__article::after
 @keyframes titleup
     0%
         opacity: 0
-        transform: translateY(-100%)
+        transform: translateY(20px)
     100%
         opacity: 1
         transform: translateY(0)

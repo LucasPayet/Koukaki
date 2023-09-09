@@ -34,9 +34,33 @@ function addFadeInAnimation() {
             // window.removeEventListener('scroll', addFadeInAnimation);
         }
     });
-}
 
-window.addEventListener('scroll', addFadeInAnimation);
+    // const titles = document.querySelectorAll('.title_up');
+    // titles.forEach(title => {
+    //     if (isInViewport(title)) {
+    //         $('h2>').css('transform', 'translatey(500px)');
+    //         // window.removeEventListener('scroll', addFadeInAnimation);
+    //     }
+    // });
+    
+
+}
+// (function(){
+// $(document).ready(function() {
+//     $(window).on('scroll', function() {
+//         $('.title_up').each(function() {
+//             if (isInViewport(this)) {
+//                 $('span', this).css('transform', 'translateY(500px)');
+//                 // $(window).off('scroll', addFadeInAnimation);
+//             }
+//         });
+//     });
+// });
+// })();
+
+
+
+// window.addEventListener('scroll', addFadeInAnimation);
 window.addEventListener('scroll', () => {
     clearTimeout(scrollTimeout);
 
@@ -52,10 +76,8 @@ window.addEventListener('scroll', () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    addFadeInAnimation();
-
-    // console.log("Navigateur" + navigator.userAgent);
-    sleep(2000)
+    // addFadeInAnimation();
+    
     const banner = document.querySelector('.banner');
     const firstChild = banner.firstChild;
 
@@ -67,7 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const isDesktop = window.innerWidth;
 
-    if (isDesktop >  769) {
-        banner.insertBefore(videoHeader, firstChild);
-    }
+    setTimeout(function(){
+        if (isDesktop >  769) {
+            banner.insertBefore(videoHeader, firstChild);
+        }
+    }, 3000)
+
 });

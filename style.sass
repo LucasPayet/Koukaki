@@ -4,23 +4,42 @@
 .header-video
     position: absolute
 
-.fade-in-anim
-    z-index: 998
-
+//fade in animation
 .fade-in-up
-    transform: translateY(25px)
+    z-index: 3
+    animation: fade-in 2s linear
+
+.fade-in-up::after
+    animation: fade-in-after 2s linear
+
+.story
+    animation: fade-in 2s linear
+
+article.story__article::before
+    animation: fade-in 2s linear
+    
+article.story__article::after
+    animation: fade-in 2s linear, spin var(--animation-speed) linear infinite
     
 .fade-in-down
     background-repeat: no-repeat
     animation: fade-in-down 2s linear
 
-// .story h2::after
-//     position: absolute
-//     left: 0.7em
+//fade in animation
 
-.fade-in
-    transform: translateY(0)
-    transition-duration: 2s
+
+
+//title animation
+.title_up span
+    animation: titleup 2s
+
+.title_up span:nth-child(1)
+    animation-delay: 0.5s
+
+.title_up span:nth-child(2)
+    animation-delay: 0.55s
+
+//title animation
 
 #oscars
     div
@@ -28,7 +47,7 @@
         flex-wrap: wrap
         justify-content: space-between
         width: 75%
-        margin: auto
+        margin: auto auto 20em auto
 
     span
         padding: 50px
@@ -44,25 +63,60 @@
         font-size: 42px
         font-weight: 700
         line-height: 52.5px
-        /* background-color: red; */
 
     img
         width: 278px
         height: 129px
 
+//flower origin
 
-.site-footer ul::after, .story h2::after, article.story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after
+.story h2::after
+    transform-origin: center 75px
+
+article.story__article::after
+    transform-origin: center 94px
+
+#studio h2::before
+    transform-origin: center 100px
+    
+#studio h2::after
+    transform-origin: center 51px
+
+.site-footer::after
+    transform-origin: center 84px
+
+//flower origin    
+.site-footer ul::after, .story h2::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after
     animation: spin var(--animation-speed) linear infinite
 
+.site-footer
+    position: relative
+    display: block
+    padding-top: 18em
+    padding-bottom: 1em
+    overflow: hidden
+
+
+.site-footer::before
+    position: absolute
+    left: 4em
+    top: 1em
+
+
+.site-footer::after
+    position: absolute
+    right: -4em
+    top: 0
+    z-index: 999
 
 
 @keyframes spin
-    100% 
+    100%
         transform: rotate(360deg)
 
-@keyframes float {
+// @keyframes float {
     
-}
+// }
 
 @keyframes fade-in-down
     0%
@@ -79,4 +133,26 @@
     100%
         opacity: 1
         transform: translateY(0)
+
+@keyframes fade-in-after
+    0%
+        opacity: 0
+        transform: translateY(50px)
+        position: absolute
+        left: 0.7em
+        top: 6em
         
+    100%
+        opacity: 1
+        transform: translateY(0)
+        position: absolute
+        left: 0.7em
+        top: 6em    
+        
+@keyframes titleup
+    0%
+        opacity: 0
+        transform: translateY(-100%)
+    100%
+        opacity: 1
+        transform: translateY(0)

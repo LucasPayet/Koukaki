@@ -32,6 +32,23 @@ article.story__article::after
 
 //fade in animation
 
+//Character section
+#charaters_custom
+    margin-top: 130px
+
+.story #characters
+    display: block
+
+.story #characters div
+    flex: none
+
+
+.main-character h3
+    background-image: url("./assets/images/orange_characters_bg.png")
+    background-position: left
+    text-align: left
+    padding: 1em
+
 //title animation
 .title-anim span
     opacity: 0
@@ -102,6 +119,16 @@ article.story__article::after
 .site-footer ul::after, .story h2::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after
     animation: spin var(--animation-speed) linear infinite
 
+//place
+.story #place
+    position: relative
+    background: url(./assets/image/Studio-Koukaki-image-lieu-1.png)
+
+.parallax
+    position: absolute
+    top: 50px
+    right: 50px
+
 .site-footer
     position: relative
     display: block
@@ -122,7 +149,30 @@ article.story__article::after
     top: 0
     z-index: 999
 
+figcaption
+    text-align: center
 
+//swiper.js
+// .swiper
+//     width: 100%
+//     padding: 50px 0
+//     background: red
+//     .swiper-slide
+//         width: 300px
+//         height: 300px
+//         background: rgba(0,0,0,0.75)
+//         display: flex
+//         align-items: center
+//         justify-content: center
+//         font-size: 60px
+
+// .swiper .swiper-wrapper .swiper-slide figure
+//     opacity: 1
+//     width: 400px
+//     height: 400px
+
+
+//animation
 @keyframes spin
     100%
         transform: rotate(360deg)

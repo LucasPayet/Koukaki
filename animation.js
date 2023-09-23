@@ -108,3 +108,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 3000)
 
 });
+
+// const target = document.querySelector('.parallax');
+// const pos = target.getBoundingClientRect();
+
+// const topP =  rect.top + window.scrollY;
+// console.log(topP);
+
+
+// if (isInViewport(target)) {
+//     // console.log(window.scrollY);
+//     const defaultY = window.scrollY;
+
+// }
+// window.addEventListener('scroll', function(e) {
+//     const target = document.querySelector('.parallax');
+//     let scroll = window.scrollY;
+//     let transX = scroll / 8;
+//     // console.log(transX)
+//     target.style.transform = 'translateX(-'+transX+'px)';
+// });
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "3",
+    loop: true,
+    loopedSlides: 2,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: -100,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+  });

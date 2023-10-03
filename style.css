@@ -2,11 +2,125 @@
   --animation-speed:20s;
 }
 
+header ul {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+header li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 57px;
+}
+header li:first-child {
+  margin-bottom: 68.81px;
+}
+header li:last-child {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0;
+  font-size: 12.13px;
+  line-height: 12.13px;
+}
+header li:last-child:hover {
+  text-shadow: none;
+}
+header a {
+  text-decoration: none;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 84.41px;
+}
+header a:hover {
+  color: #000;
+  text-shadow: 0 0 0.2em #FF5C00;
+}
+header a:active {
+  color: #000;
+}
+
+h1 {
+  position: relative;
+  height: 80px;
+  margin: 0;
+  z-index: 9999;
+  text-align: center;
+  background: #FFD5A2;
+}
+h1 a {
+  font-size: 21.48px;
+  font-weight: 700;
+}
+
+.burger {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  z-index: 9999;
+  width: 40px;
+  height: 1px;
+  margin-bottom: 10px;
+  background: #000;
+  transition: 0.75s;
+}
+
+.l1 {
+  transform: translateY(-10px);
+}
+
+.l3 {
+  transform: translateY(10px);
+}
+
+.active .l1 {
+  transform: rotate(45deg);
+}
+.active .l3 {
+  transform: rotate(-45deg);
+}
+.active .l2 {
+  opacity: 0;
+}
+
+.nav-position {
+  transform: translateY(-100%);
+}
+
+.menu-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 100vh;
+  background: #fff5e9;
+  padding-top: 80px;
+  transition: 1s;
+}
+
+.img_header {
+  width: 154.12px;
+  height: 95.36px;
+}
+
 .header-video {
   position: absolute;
 }
 
-.img_header {
+.img_logo {
   display: inline-block;
   z-index: 3;
   animation: float 10s linear infinite;
@@ -161,6 +275,31 @@ article.story__article::after {
 
 figcaption {
   text-align: center;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-wrapper {
+  width: 1440px;
+  height: 442px;
+}
+
+.swiper-slide {
+  bckground-position: center;
+  background-size: cover;
+  width: 442px;
+  height: 442px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide figure img {
+  display: block;
+  width: 382px;
 }
 
 @keyframes spin {

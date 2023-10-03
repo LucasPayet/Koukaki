@@ -13,6 +13,25 @@
 // if (isDesktop >  769) {
 //     banner.appendChild(videoHeader);
 // }
+
+const burger = document.querySelector('.burger');
+const navigation = document.querySelector('.menu-nav');
+const navAnimation = document.querySelectorAll('.nav-anim')
+
+burger.addEventListener('click', menuShow);
+
+function menuShow(){
+    navigation.classList.toggle('nav-position')
+    burger.classList.toggle('active')
+    setTimeout(function(){
+        navAnimation.forEach(element => {
+        element.classList.toggle('title-up')
+    });
+    }, 500)
+    
+}
+
+
 let scrollTimeout;
 
 
@@ -26,8 +45,10 @@ function isInViewport(element) {
     );
 }
 
+
+
 function addFadeInAnimation() {
-    const sections = document.querySelectorAll('.title-anim');
+    const sections = document.querySelectorAll('.title-studio');
     sections.forEach(section => {
         if (isInViewport(section)) {
             section.classList.add('title-up');
@@ -128,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //     // console.log(transX)
 //     target.style.transform = 'translateX(-'+transX+'px)';
 // });
+var s = skrollr.init();
 
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",

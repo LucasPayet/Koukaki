@@ -28,7 +28,6 @@ function menuShow(){
         element.classList.toggle('title-up')
     });
     }, 500)
-    
 }
 
 
@@ -82,17 +81,18 @@ function addFadeInAnimation() {
 
 
 window.addEventListener('scroll', addFadeInAnimation);
-// window.addEventListener('scroll', () => {
-//     clearTimeout(scrollTimeout);
 
-//     var animationSpeed = "5s"
-//     document.documentElement.style.setProperty('--animation-speed', animationSpeed);
-//     scrollTimeout = setTimeout(() => {
-//         animationSpeed = "20s"
-//         document.documentElement.style.setProperty('--animation-speed', animationSpeed);
-//     },1000);
+window.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+
+    var animationSpeed = "5s"
+    document.documentElement.style.setProperty('--animation-speed', animationSpeed);
+    scrollTimeout = setTimeout(() => {
+        animationSpeed = "20s"
+        document.documentElement.style.setProperty('--animation-speed', animationSpeed);
+    },2500);
     
-// })
+})
 
 // const title = ;
 

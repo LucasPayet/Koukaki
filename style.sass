@@ -1,27 +1,34 @@
 :root
     --animation-speed:20s
 
+#studio
+    overflow: hidden
+
+.title-studio
+    padding: 1em
+
 header
-    ul
-        height: 100%
-        padding: 0
-        margin: 0
-    li
-        list-style: none
-        text-align: center
-        margin-bottom: 57px
-    li:first-child
-        margin-bottom: 68.81px
-    li:last-child
-        position: absolute
-        bottom: 40px
-        left: 50%
-        transform: translateX(-50%)
-        margin-bottom: 0
-        font-size: 12.13px
-        line-height: 12.13px
-    li:last-child:hover
-            text-shadow: none
+    nav
+        ul
+            height: 100%
+            padding: 0
+            margin: 0
+            li
+                list-style: none
+                text-align: center
+                margin-bottom: 57px
+                li:first-child
+                    margin-bottom: 68.81px
+                li:last-child
+                    position: absolute
+                    bottom: 40px
+                    left: 50%
+                    transform: translateX(-50%)
+                    margin-bottom: 0
+                    font-size: 12.13px
+                    line-height: 12.13px
+                li:last-child::hover
+                    text-shadow: none
     a
         text-decoration: none
         font-size: 64px
@@ -81,18 +88,75 @@ h1
         opacity: 0
 
 .nav-position
+    // visibility: hidden!important
     transform: translateY(-100%)
 
 .menu-nav
+    overflow: hidden
     position: absolute
     top: 0
     left: 0
     // z-index: 9999
-    width: 1440px
+    width: 100%
     height: 100vh
     background: #fff5e9
     padding-top: 80px
     transition: 1s
+    ul
+        max-width: 100vw
+
+//menu pseudo element
+.menu-nav::before
+    content: url("./assets/image/orchid.png")
+    position: absolute
+    left: -59px
+    bottom: 703px
+
+.menu-nav::after
+    content: url("./assets/image/hibiscus_footer.png")
+    position: absolute
+    right: -323px
+    bottom: -323px
+
+.story-pe::before
+    content: url("./assets/image/cat.png")
+    position: absolute
+    left: 267px
+    bottom: 665px
+
+.story-pe::after
+    content: url("./assets/image/Sunflower.png")
+    position: absolute
+    scale: 1.4
+    right: 185px
+    bottom: 639px
+
+.place-pe::before
+    content: url("./assets/image/flower.png")
+    position: absolute
+    left: 213px
+    bottom: 390px
+
+.place-pe::after
+    content: url("./assets/image/random_flower.png")
+    position: absolute
+    scale: .39
+    right: -100px
+    bottom: 474px
+
+.studio-pe::before
+    content: url("./assets/image/cat-2.png")
+    position: absolute
+    right: 209px
+    bottom: 326px
+
+.studio-pe::after
+    content: url("./assets/image/cat-1.png")
+    position: absolute
+    left: 79px
+    bottom: 100px
+
+//menu pseudo element
 
 .img_header
     width: 154.12px
@@ -213,8 +277,12 @@ article.story__article::after
     transform-origin: center 84px
 
 //flower origin    
-.site-footer ul::after, .story h2::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after
+.site-footer ul::after, .story h2::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after, .menu-nav::after, .menu-nav::before, .story-pe::after, .place-pe::before, .place-pe::after 
     animation: spin var(--animation-speed) linear infinite
+
+//cat float
+.story-pe::before, .studio-pe::after, .studio-pe::before
+    animation: float 10s linear infinite
 
 //place
 .story #place
@@ -330,3 +398,7 @@ figcaption
     100%
         opacity: 1
         transform: translateY(0)
+
+@media screen and (max-width: 800px)
+    #oscars p
+        font-size: 5vw

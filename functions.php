@@ -9,7 +9,6 @@ function theme_enqueue_styles() {
     wp_enqueue_style('swipercss', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
     // wp_enqueue_script('swipercss');
     wp_enqueue_script('animation', get_stylesheet_directory_uri() . '/animation.js'); // Set the last argument to true for 'defer'
-
 }
 
 function add_defer_attribute($tag, $handle) {

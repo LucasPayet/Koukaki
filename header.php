@@ -39,10 +39,10 @@
         <nav class="menu-nav nav-position">
             <ul>
                 <li><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" class="img_header"></li>
-                <li><a href="#story" class="title-anim nav-anim"><span>Histoire</span></a></li>
+                <li><a href="#story" class="title-anim nav-anim story-pe"><span>Histoire</span></a></li>
                 <li><a href="#characters" class="title-anim nav-anim"><span>Personnages</span></a></li>
-                <li><a href="#place" class="title-anim nav-anim"><span>Lieu</span></a></li>
-                <li><a href="#studio" class="title-anim nav-anim"><span>Studio</span><span>Koukaki</span></a></li>
+                <li><a href="#place" class="title-anim nav-anim place-pe"><span>Lieu</span></a></li>
+                <li><a href="#studio" class="title-anim nav-anim studio-pe"><span>Studio</span><span>Koukaki</span></a></li>
                 <li>STUDIO KOUKAKI</li>
             </ul>
         </nav>

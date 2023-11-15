@@ -18,9 +18,9 @@
             <li><a href="#">STUDIO KOUKAKI</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-	</footer><!-- #colophon -->
+	</footer>
     
-</div><!-- #page -->
+</div>
 
 
 <?php wp_footer(); ?>

@@ -47,34 +47,7 @@ get_header();
             </div>
         </section>
 
-    <!-- <style>
-    .swiper {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    .swiper-wrapper{
-        width: 1440px;
-        height: 442px;
-    }
-
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 442px;
-      height: 442px;
-      display: flex;
-      align-items: center;
-    }
-
-    .swiper-slide figure img {
-      display: block;
-      width: 382px;
-    }
-  </style> -->
-
-    </main><!-- #main -->
+    </main>
 
 <?php
 get_footer();

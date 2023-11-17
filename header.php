@@ -16,6 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="url" content="<?php echo home_url()?>">
 	<?php wp_head(); ?>
 </head>
 
@@ -35,10 +36,10 @@
         <nav class="menu-nav nav-position">
             <ul>
                 <li><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" class="img_header"></li>
-                <li><a href="#story" class="title-anim nav-anim story-pe"><span>Histoire</span></a></li>
-                <li><a href="#characters" class="title-anim nav-anim"><span>Personnages</span></a></li>
-                <li><a href="#place" class="title-anim nav-anim place-pe"><span>Lieu</span></a></li>
-                <li><a href="#studio" class="title-anim nav-anim studio-pe"><span>Studio</span><span>Koukaki</span></a></li>
+                <li><a href="#story" class="click title-anim nav-anim story-pe"><span>Histoire</span></a></li>
+                <li><a href="#characters" class="click title-anim nav-anim"><span>Personnages</span></a></li>
+                <li><a href="#place" class="click title-anim nav-anim place-pe"><span>Lieu</span></a></li>
+                <li><a href="#studio" class="click title-anim nav-anim studio-pe"><span>Studio</span><span>Koukaki</span></a></li>
                 <li>STUDIO KOUKAKI</li>
             </ul>
         </nav>

@@ -9,7 +9,7 @@ get_header();
         </section>
         
         <section id="#story" class="story">
-            <h2>L'histoire</h2>
+            <h2 class="title-studio"><span>L'histoire</span></h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
@@ -25,14 +25,14 @@ get_header();
             ?>
             <article id="charaters_custom" class="fade-in-up">
                 <div id="characters" class="main-character">
-                    <h3>Les personnages</h3>
+                    <h3 class="title-studio"><span>Les</span><span> personnages</span></h3>
                     <?php get_template_part( './template-parts/character-swiper' );?>
                 </div> 
             </article>
             
             <article id="place" class="fade-in-up">
                 <div class="no-animation">
-                    <h3>Le Lieu</h3>
+                    <h3 class="title-studio"><span>Le</span><span> Lieu</span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/image/Nuages.png'; ?>" alt="" class="parallax" data-1550="position:absolute; top:40px; left:793px;" data-2200="left:333px;">

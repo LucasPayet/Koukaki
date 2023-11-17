@@ -1,8 +1,15 @@
 const burger = document.querySelector('.burger');
 const navigation = document.querySelector('.menu-nav');
 const navAnimation = document.querySelectorAll('.nav-anim')
+const menuLink = document.querySelectorAll('.click')
+
 
 burger.addEventListener('click', menuShow);
+menuLink.forEach(link => {
+    link.addEventListener('click', menuShow);
+});
+
+
 
 function menuShow(){
     navigation.classList.toggle('nav-position')
@@ -40,8 +47,6 @@ function addFadeInAnimation() {
     });
 }
 
-
-
 window.addEventListener('scroll', addFadeInAnimation);
 
 window.addEventListener('scroll', () => {
@@ -57,13 +62,14 @@ window.addEventListener('scroll', () => {
 })
 
 document.addEventListener('DOMContentLoaded', function() {
-    // addFadeInAnimation();
-    
+    const urlMeta = document.querySelector('meta[name="url"]');
+    const url = urlMeta.getAttribute('content');
+
     const banner = document.querySelector('.banner');
     const firstChild = banner.firstChild;
 
     const videoHeader = document.createElement('video');
-    videoHeader.src = 'http://localhost/Koukaki/wp-content/themes/foce-child/assets/video/Studio_Koukaki-vidéo_header_sans_son.mp4';
+    videoHeader.src = url + '/wp-content/themes/foce-child/assets/video/Studio_Koukaki-vidéo_header_sans_son.mp4';
     videoHeader.autoplay = true;
     videoHeader.loop = true;
     videoHeader.className = 'header-video';
@@ -75,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
             banner.insertBefore(videoHeader, firstChild);
         }
     }, 3000)
-
 });
 
 var s = skrollr.init();
